@@ -3,6 +3,7 @@ import MyNav from "./Components/MyNav";
 import MyFooter from "./Components/MyFooter";
 import MyAlert from "./Components/MyAlert";
 import AllTheBooks from "./Components/AllTheBooks";
+import AllTheBook from "./Components/AllTheBook";
 
 function App() {
   return (
