@@ -6,7 +6,7 @@ const AllTheBooks = function () {
     <Container>
       <h1 className=" pb-4">I nostri libri</h1>
       <Row className="row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-        {librifantasy.map((libro) => {
+        {librifantasy.slice(0,12).map((libro) => {
           return (
             <Col key={libro.asin} className="">
               <Card className="h-100">
