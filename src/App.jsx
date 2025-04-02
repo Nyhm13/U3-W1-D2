@@ -5,6 +5,12 @@ import MyAlert from "./Components/MyAlert";
 import AllTheBooks from "./Components/AllTheBooks";
 import AllTheBook from "./Components/AllTheBook";
 import SingleBook from "./Components/SingleBook";
+import BookList from "./Components/BookList";
+import librifantasy from "./data/fantasy.json";
+import librihorror from "./data/horror.json"
+import libriscifi from "./data/scifi.json"
+import librihistory from "./data/history.json"
+import libriromance from "./data/romance.json"
 
 function App() {
  const libroProva= {
@@ -22,8 +28,14 @@ function App() {
         <MyAlert />
       </header>
       <main className=" flex-grow-1">
-        <SingleBook libro={libroProva}/>
+        {/* <SingleBook libro={libroProva}/> */}
         {/* <AllTheBooks /> */}
+        <BookList listaLibri={librihorror} tipo="Horror"/>
+        <BookList listaLibri={librifantasy} tipo="Fantasy" />
+        <BookList listaLibri={libriromance} tipo="Romance" />
+        <BookList listaLibri={librihistory} tipo="History" />
+        <BookList listaLibri={libriscifi} tipo="Scifi" />
+
       </main>
       <footer>
         <MyFooter />
