@@ -11,6 +11,7 @@ import librihorror from "./data/horror.json"
 import libriscifi from "./data/scifi.json"
 import librihistory from "./data/history.json"
 import libriromance from "./data/romance.json"
+import CommentArea from "./Components/CommentArea";
 
 function App() {
  const libroProva= {
@@ -31,10 +32,11 @@ function App() {
         {/* <SingleBook libro={libroProva}/> */}
         {/* <AllTheBooks /> */}
         <BookList listaLibri={librihorror} tipo="Horror"/>
-        <BookList listaLibri={librifantasy} tipo="Fantasy" />
+        
+        {/* <BookList listaLibri={librifantasy} tipo="Fantasy" />
         <BookList listaLibri={libriromance} tipo="Romance" />
         <BookList listaLibri={librihistory} tipo="History" />
-        <BookList listaLibri={libriscifi} tipo="Scifi" />
+        <BookList listaLibri={libriscifi} tipo="Scifi" /> */}
 
       </main>
       <footer>

@@ -35,7 +35,9 @@ class BookList extends Component {
                 return false
             }
           }).map((libro) => {
+           
             return <SingleBook key={libro.asin} libro={libro} />;
+            
           })}
         </Row>
       </Container>
