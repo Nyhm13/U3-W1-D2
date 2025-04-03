@@ -28,14 +28,14 @@ class CommentArea extends Component {
                 throw new Error('errore nella fetch')
             }
         }).then((data)=>{
-            console.log (data)
+            console.log ('DATA',data)
             this.setState({comments:data})
         })
         .catch((err)=>{
             console.log('errore',err)
         })
     }
-    componentDidMount() {
+    componentDidMount=()=> {
         this.getComments();
       }
 
@@ -43,7 +43,7 @@ class CommentArea extends Component {
 
     return (
      <div>
-        <h5> Commenti</h5>
+        <h5 className="text-center"> Commenti</h5>
         <CommentsList comment={this.state.comments}/>
      </div>
     );
