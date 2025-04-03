@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Form } from "react-bootstrap";
 import SingleBook from "./SingleBook";
+import CommentsList from "./CommentsList";
 
 const Token= "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VlN2NiNzFkNDM2ZTAwMTVkYTI3MGIiLCJpYXQiOjE3NDM2ODI3NDMsImV4cCI6MTc0NDg5MjM0M30.HfcucgurYn1ojdw74CO-z3977cDs5bMha-19KgrzBBo"
 const Url='https://striveschool-api.herokuapp.com/api/comments/'
@@ -18,6 +19,7 @@ class CommentArea extends Component {
                 Authorization: Token,
             }
         })
+        
         .then((response)=>{
             if (response.ok){
                 console.log('commenti',response)
@@ -38,13 +40,12 @@ class CommentArea extends Component {
       }
 
     render() {
+
     return (
-      <Form className="mt-4">
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Recensioni</Form.Label>
-          <Form.Control as="textarea" rows={1} />
-        </Form.Group>
-      </Form>
+     <div>
+        <h5> Commenti</h5>
+        <CommentsList comment={this.state.comments}/>
+     </div>
     );
   }
 }
